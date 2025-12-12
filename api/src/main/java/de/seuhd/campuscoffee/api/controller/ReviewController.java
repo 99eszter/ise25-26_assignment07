@@ -70,7 +70,7 @@ public class ReviewController extends CrudController<Review, ReviewDto, Long> {
         } catch (Exception ignored) {
             // if setter not present, assume DTO already contains id
         }
-        return super.update(dto);
+        return super.update(id, dto);
     }
 
     @Operation
@@ -128,6 +128,6 @@ public class ReviewController extends CrudController<Review, ReviewDto, Long> {
         } catch (Exception e) {
             // ignore reflection issues
         }
-        return super.update(dto);
+        return super.update(id, dto);
     }
 }
