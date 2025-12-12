@@ -3,8 +3,8 @@ package de.seuhd.campuscoffee.api.dtos;
 import lombok.Builder;
 import org.jspecify.annotations.Nullable;
 
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import java.time.Instant;
 
 /**
@@ -12,7 +12,6 @@ import java.time.Instant;
  */
 @Builder(toBuilder = true)
 public record ReviewDto(
-        @Nullable Long id
         @Nullable Long id,
         @Nullable Instant createdAt,
         @Nullable Instant updatedAt,
